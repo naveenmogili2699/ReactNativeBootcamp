@@ -7,7 +7,7 @@ const AlertsPractice = () => {
       <Text>Alerts Practice</Text>
       <Button 
       title='Alert 1'
-      onPress={()=>Alert.alert("invalid input")}
+      onPress={()=>Alert.alert("invalid input Hi")}
       />
       <Button 
       title='Alert 2'
