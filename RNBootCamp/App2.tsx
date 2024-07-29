@@ -10,6 +10,7 @@ export default function App() {
   return (
     <SafeAreaView>
         <ScrollView>
+          
             <AlertsPractice />
             
         </ScrollView>
