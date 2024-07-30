@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement, multiply, selectCount,itemRed, selectItem} from '../ReduxToolKit/counterSlice';
-import {deposit, totalBlc} from '../ReduxToolKit/balanceSlice';
+import { increment, decrement, multiply, selectCount,itemRed, selectItem} from '../Redux/ReduxToolKit/counterSlice';
+import {deposit, totalBlc} from '../Redux/ReduxToolKit/balanceSlice';
 import { View, Text, Button } from 'react-native';
 
 

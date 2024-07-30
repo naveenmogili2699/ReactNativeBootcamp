@@ -2,7 +2,7 @@ import { Button, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import {useNavigation} from '@react-navigation/native'
 import { useSelector, useDispatch } from 'react-redux';
-import {deposit, totalBlc} from '../ReduxToolKit/balanceSlice';
+import {deposit, totalBlc} from '../Redux/ReduxToolKit/balanceSlice';
 
 const HomeScreen = ({}) => {
     const navigation = useNavigation()
