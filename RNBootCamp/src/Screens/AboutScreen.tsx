@@ -1,7 +1,7 @@
 import { StyleSheet, Text, TouchableHighlight, TouchableHighlightComponent, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import {deposit, totalBlc} from '../ReduxToolKit/balanceSlice';
+import {withdraw, totalBlc} from '../ReduxToolKit/balanceSlice';
 
 const AboutScreen = ({navigation}) => {
   const blc = useSelector(totalBlc)
@@ -14,9 +14,9 @@ const AboutScreen = ({navigation}) => {
             <Text style={styles.buttonst} onPress={()=>navigation.navigate('Details')}>Goto Details Page</Text>
         </View>
       </TouchableHighlight>
-
+      <Text>Balance : {blc}</Text>
       <TouchableOpacity
-                onPress={() => dispatch(deposit())}
+                onPress={() => dispatch(withdraw())}
                 style={styles.withdraw}
             >
                 <Text>Withdraw</Text>

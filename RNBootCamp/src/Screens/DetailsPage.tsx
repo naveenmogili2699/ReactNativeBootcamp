@@ -2,7 +2,7 @@ import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useSelector, useDispatch } from 'react-redux';
-import {withdraw, totalBlc} from '../ReduxToolKit/balanceSlice';
+import {totalBlc, deposit} from '../ReduxToolKit/balanceSlice';
 
 const DetailsPage = ({ navigation }) => {
     const blc = useSelector(totalBlc)
@@ -30,7 +30,7 @@ const DetailsPage = ({ navigation }) => {
             </TouchableOpacity>
             <Text>Balance : {blc}</Text>
             <TouchableOpacity
-                onPress={() => dispatch(withdraw())}
+                onPress={() => dispatch(deposit())}
                 style={styles.deposit}
             >
                 <Text>Deposit</Text>
