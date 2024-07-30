@@ -72,95 +72,95 @@ import RNBottomNavigation from './src/Navigations/RNBottom/RNBottomNavigation'
 
 
 const App = () => {
-  
+
   return (
-  //   <SafeAreaView>
-  //     <ScrollView>
-  //       {/* <Text>App</Text>
-  //       <Basics1 />
-  //       <FlatListPractice />
-  //       <StudentList />
-  //       <ProgramsList />
-  //       <MapMethod />
-  //       <AlertsPractice />
-  //       <ModelPractice />
-  //       <StatusBarPractice />
-  //       <ActivityIndicatorPractice /> */}
-  //       {/* <UseEffectPractice />
-  //       <UseReducerPractice/>
-  //       <UseReducerPractice2 /> */}
-  //       {/* <UseRefPractice /> */}
-  //       {/* <PickerPractice /> */}
-  //       {/* <UseRefPractice /> */}
-  //       {/* <UseRefwithTimer /> */}
-  //       {/* <StopWatch/> */}
-  //       {/* <First/> */}
-  //       {/* <Task2/>
-  //       <Task3/> */}
-  //       {/* <First2/> */}
-  //       {/* <Task3/> */}
-  //        {/* <BackGroundImages/> */}
-  //       {/* <Text>Hello World</Text>
-  //       <View ><Text>Hello 123</Text></View> */}
-  //       {/* <ImageonImage/> */}
-  //       {/* <UseMemo/> */}
-  //       {/* <UseCallBack/> */}
-  //       {/* <UseCallBack2></UseCallBack2> */}
-  //       {/* <TextinputsinFlatList/> */}
-  //     </ScrollView>
-  //  </SafeAreaView>
-//<LoginPage/>
+    //   <SafeAreaView>
+    //     <ScrollView>
+    //       {/* <Text>App</Text>
+    //       <Basics1 />
+    //       <FlatListPractice />
+    //       <StudentList />
+    //       <ProgramsList />
+    //       <MapMethod />
+    //       <AlertsPractice />
+    //       <ModelPractice />
+    //       <StatusBarPractice />
+    //       <ActivityIndicatorPractice /> */}
+    //       {/* <UseEffectPractice />
+    //       <UseReducerPractice/>
+    //       <UseReducerPractice2 /> */}
+    //       {/* <UseRefPractice /> */}
+    //       {/* <PickerPractice /> */}
+    //       {/* <UseRefPractice /> */}
+    //       {/* <UseRefwithTimer /> */}
+    //       {/* <StopWatch/> */}
+    //       {/* <First/> */}
+    //       {/* <Task2/>
+    //       <Task3/> */}
+    //       {/* <First2/> */}
+    //       {/* <Task3/> */}
+    //        {/* <BackGroundImages/> */}
+    //       {/* <Text>Hello World</Text>
+    //       <View ><Text>Hello 123</Text></View> */}
+    //       {/* <ImageonImage/> */}
+    //       {/* <UseMemo/> */}
+    //       {/* <UseCallBack/> */}
+    //       {/* <UseCallBack2></UseCallBack2> */}
+    //       {/* <TextinputsinFlatList/> */}
+    //     </ScrollView>
+    //  </SafeAreaView>
+    //<LoginPage/>
 
- //<RNStackNavigation />
-  // <RNBottomNavigation />
-  // <RNDrawerNavigation />
-  // <RNTopMenuNavigation />
+    //<RNStackNavigation />
+    // <RNBottomNavigation />
+    // <RNDrawerNavigation />
+    // <RNTopMenuNavigation />
 
-  // <LoginNavigations />
+    // <LoginNavigations />
 
-  // <VectorIcons/>
+    // <VectorIcons/>
 
-  // <Dropdownpicker/>
+    // <Dropdownpicker/>
 
-  // <Imagepicker/>
+    // <Imagepicker/>
 
-  // <RNModel/>
+    // <RNModel/>
 
-  // <RadioButtonGroup/>
-//  <CheckBoxes/>
-// <RNCalendars/>
-// <Toggleswitch/>
-// <SliderBar/>
-// <IntroSlider/>
-// <ToastMessage/>
-// <CustomeToast/>
-//<FormikandYup/>
-//<NPMsTask1/> 
-//<DatePickerPrac/>
-//<RNSharing/>
-//<Shareing/>
-//<Screenshot/>
-//<Sht/>
-//<AwakeLib/>
+    // <RadioButtonGroup/>
+    //  <CheckBoxes/>
+    // <RNCalendars/>
+    // <Toggleswitch/>
+    // <SliderBar/>
+    // <IntroSlider/>
+    // <ToastMessage/>
+    // <CustomeToast/>
+    //<FormikandYup/>
+    //<NPMsTask1/> 
+    //<DatePickerPrac/>
+    //<RNSharing/>
+    //<Shareing/>
+    //<Screenshot/>
+    //<Sht/>
+    //<AwakeLib/>
 
-//<Popupmenu/>
-//<LoAni/>
-//<RNProgress/>
-//<BottomSheets/>
-//<GoogleMaps/>
-//<Rdx/>
-//<BAckgroundcolChg/>
-//<MyComponent/>
-<Provider store={store}>
-{/* <ReduxScreen/> */}
-<RNBottomNavigation />
-</Provider>
+    //<Popupmenu/>
+    //<LoAni/>
+    //<RNProgress/>
+    //<BottomSheets/>
+    //<GoogleMaps/>
+    //<Rdx/>
+    //<BAckgroundcolChg/>
+    //<MyComponent/>
+    <Provider store={store}>
+      {/* <ReduxScreen/> */}
+      <RNBottomNavigation />
+    </Provider>
 
 
 
 
   )
-}              
+}
 
 export default App;
 
