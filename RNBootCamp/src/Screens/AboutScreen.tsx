@@ -1,7 +1,11 @@
 import { StyleSheet, Text, TouchableHighlight, TouchableHighlightComponent, TouchableOpacity, View } from 'react-native'
 import React from 'react'
+import { useSelector, useDispatch } from 'react-redux';
+import {deposit, totalBlc} from '../ReduxToolKit/balanceSlice';
 
 const AboutScreen = ({navigation}) => {
+  const blc = useSelector(totalBlc)
+  const dispatch = useDispatch()
   return (
     <View style={styles.aboutscreen}>
       <Text style={styles.textstyle}>About Screen</Text>
@@ -10,6 +14,13 @@ const AboutScreen = ({navigation}) => {
             <Text style={styles.buttonst} onPress={()=>navigation.navigate('Details')}>Goto Details Page</Text>
         </View>
       </TouchableHighlight>
+
+      <TouchableOpacity
+                onPress={() => dispatch(deposit())}
+                style={styles.withdraw}
+            >
+                <Text>Withdraw</Text>
+            </TouchableOpacity>
     </View> 
   )
 }
@@ -37,5 +48,13 @@ const styles = StyleSheet.create({
         fontSize: 18,
         padding: 12,
         
+    },
+    withdraw:{
+      borderWidth:1,
+      padding:10,
+      paddingLeft:20,
+      paddingRight:20,
+      backgroundColor:'green',
+      borderRadius:8,
     },
 })

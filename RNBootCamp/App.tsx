@@ -67,6 +67,7 @@ import MyComponent from './src/Redux/MyComponent'
 import ReduxScreen from './src/Screens/ReduxScreen'
 import { store } from './src/ReduxToolKit/store';
 import { Provider } from 'react-redux';
+import RNBottomNavigation from './src/Navigations/RNBottom/RNBottomNavigation'
 
 
 
@@ -151,7 +152,8 @@ const App = () => {
 //<BAckgroundcolChg/>
 //<MyComponent/>
 <Provider store={store}>
-<ReduxScreen/>
+{/* <ReduxScreen/> */}
+<RNBottomNavigation />
 </Provider>
 
 
