@@ -5,10 +5,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from '../../Screens/HomeScreen';
 import AboutScreen from '../../Screens/AboutScreen';
 import DetailsPage from '../../Screens/DetailsPage';
-import MapMethod from '../../Code/MapMethod';
-import FlatListPractice from '../../Code/FlatListPractice';
-import StudentList from '../../Code/StudentList';
-import AsyncStorageScreen from '../../Code/AsyncStorageScreen';
+import MapMethod from '../../CoreComponents/MapMethod';
+import FlatListPractice from '../../CoreComponents/FlatListPractice';
+import StudentList from '../../CoreComponents/StudentList';
+import AsyncStorageScreen from '../../CoreComponents/AsyncStorageScreen';
 import Intro from '../../LoginFunctionality/Intro';
 
 const  Stack = createNativeStackNavigator();

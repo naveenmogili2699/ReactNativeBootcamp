@@ -1,7 +1,7 @@
 import { KeyboardAvoidingView, KeyboardAvoidingViewComponent, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome';
-import Contacts from '../LoginFunctionality/Contacts';
+import Contacts from '../../LoginFunctionality/Contacts';
 import IconEmail from 'react-native-vector-icons/Ionicons'
 import IconPhone from 'react-native-vector-icons/SimpleLineIcons'
 import Antdesign from 'react-native-vector-icons/AntDesign'

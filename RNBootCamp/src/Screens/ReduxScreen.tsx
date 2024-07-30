@@ -21,8 +21,8 @@ const ReduxScreen = () => {
       <Button title="Multiply" onPress={() => dispatch(multiply())} />
       <Button title="Item" onPress={() => dispatch(itemRed('Kirr'))} />
       <Text>Balance: {blc}</Text>
-      <Button title="Deposit      " onPress={() => dispatch(deposit())} />
-        <Text>hello Kiran</Text>
+      <Button title="Deposit" onPress={() => dispatch(deposit())} />
+      <Text>hello Kiran</Text>
     </View>
   );
 };
