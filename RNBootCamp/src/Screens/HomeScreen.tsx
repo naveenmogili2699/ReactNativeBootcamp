@@ -1,12 +1,16 @@
 import { Button, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import {useNavigation} from '@react-navigation/native'
+import { useSelector, useDispatch } from 'react-redux';
+import {deposit, totalBlc} from '../ReduxToolKit/balanceSlice';
 
 const HomeScreen = ({}) => {
     const navigation = useNavigation()
+  const blc = useSelector(totalBlc)
   return (
     <View style={styles.homescreen}>
       <Text style={styles.textstyle}>Home Screen</Text>
+      <Text>Balance : {blc}</Text>
       <Button title='Goto About Page'
       onPress={()=>navigation.navigate('About')}
       />
