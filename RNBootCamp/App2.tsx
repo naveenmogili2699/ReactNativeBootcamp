@@ -3,8 +3,8 @@ import React from 'react'
 import 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { ScrollView } from 'react-native-gesture-handler'
-import AlertsPractice from './src/Code/AlertsPractice'
-import ModelPractice from './src/Code/ModelPractice'
+import AlertsPractice from './src/CoreComponents/AlertsPractice'
+import ModelPractice from './src/CoreComponents/ModelPractice'
 
 export default function App() {
   return (

@@ -2,9 +2,13 @@ import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useSelector, useDispatch } from 'react-redux';
+<<<<<<< HEAD
 import { totalBlc, deposit } from '../ReduxToolKit/balanceSlice';
 import {useNavigation} from '@react-navigation/native'
 import MapMethod from '../Code/MapMethod';
+=======
+import {totalBlc, deposit} from '../Redux/ReduxToolKit/balanceSlice';
+>>>>>>> 7dbf3b8116f364edf9ffbf69441cb78e134ff5a3
 
 const DetailsPage = () => {
     const blc = useSelector(totalBlc)

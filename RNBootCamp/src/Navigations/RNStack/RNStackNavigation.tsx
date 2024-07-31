@@ -5,11 +5,13 @@ import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from '../../Screens/HomeScreen';
 import AboutScreen from '../../Screens/AboutScreen';
 import DetailsPage from '../../Screens/DetailsPage';
-import MapMethod from '../../Code/MapMethod';
-import FlatListPractice from '../../Code/FlatListPractice';
-import StudentList from '../../Code/StudentList';
-import AsyncStorageScreen from '../../Code/AsyncStorageScreen';
-import Intro from '../../LoginFunctionality/Intro';
+
+
+import MapMethod from '../../Components/CoreComponents/MapMethod';
+import Intro from '../../Screens/LoginFunctionality/Intro';
+import FlatListPractice from '../../Components/CoreComponents/FlatListPractice';
+import StudentList from '../../Components/CoreComponents/StudentList';
+import AsyncStorageScreen from '../../Components/CoreComponents/AsyncStorageScreen';
 
 const  Stack = createNativeStackNavigator();
 const RNStackNavigation = () => {
@@ -24,7 +26,6 @@ const RNStackNavigation = () => {
           <Stack.Screen name='FlatList' component={FlatListPractice}/>
           <Stack.Screen name='StundetsList' component={StudentList} />
          <Stack.Screen name='Async' component={AsyncStorageScreen} />
-         
         </Stack.Navigator>
       </NavigationContainer>
   )
