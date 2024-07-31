@@ -1,16 +1,20 @@
-import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Button, KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useSelector, useDispatch } from 'react-redux';
-import {totalBlc, deposit} from '../Redux/ReduxToolKit/balanceSlice';
-import {useNavigation} from '@react-navigation/native'
+import { totalBlc, deposit } from '../Redux/ReduxToolKit/balanceSlice';
+import { useNavigation } from '@react-navigation/native'
 
 const DetailsPage = () => {
     const blc = useSelector(totalBlc)
     const dispatch = useDispatch()
+    const navigation = useNavigation();
+    const [depositAmount, setDepositAmount] = useState(0)
 
-    const navigation = useNavigation();    
-
+    const handleChange = (val) => {
+        setDepositAmount(val);
+    };
+    
     return (
         <SafeAreaView style={styles.container}>
             <Text>Details Page</Text>
@@ -34,8 +38,22 @@ const DetailsPage = () => {
 
             <Text>Balance : {blc}</Text>
 
+            <KeyboardAvoidingView
+                //  behavior={ Platform.OS === 'android' ? 'padding' : undefined }
+                // keyboardVerticalOffset={100}
+                // behavior='position'
+                // contentContainerStyle={styles.cont}
+            >
+                <TextInput
+                    placeholder='Enter Deposit Amount'
+                    keyboardType='numeric'
+                    onChangeText={(val) => handleChange(val)}
+                // onSubmitEditing={()=>setDepositAmount(0)}
+                />
+            </KeyboardAvoidingView>
+
             <TouchableOpacity
-                onPress={() => dispatch(deposit())}
+                onPress={() => dispatch(deposit(depositAmount))}
                 style={styles.deposit}
             >
                 <Text>Deposit</Text>
@@ -47,7 +65,7 @@ const DetailsPage = () => {
                 <Text>Goto Async Storage Page</Text>
             </TouchableOpacity> */}
 
-        </SafeAreaView>
+        </SafeAreaView >
     )
 }
 
@@ -78,5 +96,8 @@ const styles = StyleSheet.create({
         paddingRight: 20,
         backgroundColor: 'green',
         borderRadius: 8,
+    },
+    cont:{
+
     }
 })

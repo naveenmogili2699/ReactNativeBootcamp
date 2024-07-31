@@ -1,11 +1,18 @@
-import { StyleSheet, Text, TouchableHighlight, TouchableHighlightComponent, TouchableOpacity, View } from 'react-native'
-import React from 'react'
+import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableHighlight, TouchableHighlightComponent, TouchableOpacity, View } from 'react-native'
+import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import {withdraw, totalBlc} from '../Redux/ReduxToolKit/balanceSlice';
+import { withdraw, totalBlc, deposit } from '../Redux/ReduxToolKit/balanceSlice';
+
 
 const AboutScreen = ({ navigation }) => {
   const blc = useSelector(totalBlc)
   const dispatch = useDispatch()
+  const [withdrawAmount, setWithdrawAmount] = useState(0)
+
+  const handleChange = (val) => {
+    setWithdrawAmount(val);
+  };
+
   return (
     <View style={styles.aboutscreen}>
       <Text style={styles.textstyle}>About Screen</Text>
@@ -16,8 +23,21 @@ const AboutScreen = ({ navigation }) => {
       </TouchableHighlight>
 
       <Text>Balance : {blc}</Text>
+      <KeyboardAvoidingView
+        //  behavior={ Platform.OS === 'android' ? 'padding' : undefined }
+        keyboardVerticalOffset={50}
+        behavior='position'
+        contentContainerStyle={styles.cont}
+      >
+        <TextInput
+          placeholder='Enter Withdraw Amount'
+          keyboardType='numeric'
+          onChangeText={(va) => handleChange(va)}
+        // onSubmitEditing={()=>setDepositAmount(0)}
+        />
+      </KeyboardAvoidingView>
       <TouchableOpacity
-        onPress={() => dispatch(withdraw())}
+        onPress={() => dispatch(withdraw(withdrawAmount))}
         style={styles.withdraw}
       >
         <Text>Withdraw</Text>
@@ -58,4 +78,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'green',
     borderRadius: 8,
   },
+  cont: {
+  }
 })
