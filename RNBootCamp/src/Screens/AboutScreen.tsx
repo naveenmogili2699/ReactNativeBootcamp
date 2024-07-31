@@ -1,7 +1,7 @@
 import { StyleSheet, Text, TouchableHighlight, TouchableHighlightComponent, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import {withdraw, totalBlc} from '../ReduxToolKit/balanceSlice';
+import {withdraw, totalBlc} from '../Redux/ReduxToolKit/balanceSlice';
 
 const AboutScreen = ({navigation}) => {
   const blc = useSelector(totalBlc)
