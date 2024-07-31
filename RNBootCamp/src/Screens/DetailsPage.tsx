@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useSelector, useDispatch } from 'react-redux';
 import {totalBlc, deposit} from '../Redux/ReduxToolKit/balanceSlice';
+import {useNavigation} from '@react-navigation/native'
 
 const DetailsPage = () => {
     const blc = useSelector(totalBlc)

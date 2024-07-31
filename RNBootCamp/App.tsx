@@ -149,7 +149,8 @@ const App = () => {
     //<BAckgroundcolChg/>
     //<MyComponent/>
     <Provider store={store}>
-      <ReduxScreen />
+      {/* <ReduxScreen /> */}
+      <RNStackNavigation/>
     </Provider>
   );
 };
