@@ -6,6 +6,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../../Screens/HomeScreen';
 import AboutScreen from '../../Screens/AboutScreen';
 import DetailsPage from '../../Screens/DetailsPage';
+import MapMethod from '../../Code/MapMethod';
 
 const Tab = createBottomTabNavigator();
 const RNBottomNavigation = () => {

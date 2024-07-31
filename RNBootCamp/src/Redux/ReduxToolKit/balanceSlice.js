@@ -20,6 +20,4 @@ export const { deposit,withdraw } = balanceSlice.actions;
 
 export const totalBlc = (state) => state.balance.value;
 
-//export const selectItem = (state) => state.counter.item;
-
 export default balanceSlice.reducer;
