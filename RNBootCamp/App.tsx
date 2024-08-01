@@ -1,7 +1,6 @@
 import {SafeAreaView, ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import basics1 from './src/CoreComponents/Basics1';
-import Basics1 from './src/CoreComponents/FlatListPractice';
+
 import FlatListPractice from './src/CoreComponents/FlatListPractice';
 import StudentList from './src/CoreComponents/StudentList';
 import ProgramsList from './src/CoreComponents/ProgramsList';
@@ -68,15 +67,13 @@ import ReduxScreen from './src/Screens/ReduxScreen';
 import {store} from './src/Redux/ReduxToolKit/store';
 import {Provider} from 'react-redux';
 import RNBottomNavigation from './src/Navigations/RNBottom/RNBottomNavigation';
+import Basics1 from './src/Components/CoreComponents/Basics1';
 
 const App = () => {
   return (
     //   <SafeAreaView>
     //     <ScrollView>
-    //       {/* <Text>App</Text>
-    //       <Basics1 />
-    //       <FlatListPractice />
-    //       <StudentList />
+    
     //       <ProgramsList />
     //       <MapMethod />
     //       <AlertsPractice />
