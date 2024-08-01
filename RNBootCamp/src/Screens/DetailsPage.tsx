@@ -9,7 +9,7 @@ const DetailsPage = () => {
     const blc = useSelector(totalBlc)
     const dispatch = useDispatch()
     const navigation = useNavigation();
-    const [depositAmount, setDepositAmount] = useState(0)
+    const [depositAmount, setDepositAmount] = useState('')
 
     const handleChange = (val) => {
         setDepositAmount(val);
@@ -48,12 +48,15 @@ const DetailsPage = () => {
                     placeholder='Enter Deposit Amount'
                     keyboardType='numeric'
                     onChangeText={(val) => handleChange(val)}
-                // onSubmitEditing={()=>setDepositAmount(0)}
+                    value={depositAmount.toString()}
                 />
             </KeyboardAvoidingView>
 
             <TouchableOpacity
-                onPress={() => dispatch(deposit(depositAmount))}
+                onPress={() =>{ 
+                    dispatch(deposit(depositAmount))
+                    setDepositAmount('')
+                }}
                 style={styles.deposit}
             >
                 <Text>Deposit</Text>
