@@ -3,14 +3,14 @@ import { createSlice } from '@reduxjs/toolkit';
 export const balanceSlice = createSlice({
   name: 'balance',
   initialState: {
-    value: 10000,
+    value: Number(10000),
   },
   reducers: {
-    deposit: (state) => {
-      state.value += 10;
+    deposit: (state,action) => {
+      state.value += Number  (action.payload);
     },
-    withdraw: (state) => {
-      state.value -= 10;
+    withdraw: (state,action) => {
+      state.value -= Number(action.payload);
     },
     
   }, 
