@@ -68,8 +68,13 @@ import {store} from './src/Redux/ReduxToolKit/store';
 import {Provider} from 'react-redux';
 import RNBottomNavigation from './src/Navigations/RNBottom/RNBottomNavigation';
 import Basics1 from './src/Components/CoreComponents/Basics1';
+import { PersistGate } from 'redux-persist/integration/react';
+import { persistStore } from 'redux-persist';
+import { mystore } from './src/Redux/ReduxPersist/mystore';
+
 
 const App = () => {
+  const persistor = persistStore(mystore)
   return (
     //   <SafeAreaView>
     //     <ScrollView>
@@ -145,9 +150,20 @@ const App = () => {
     //<Rdx/>
     //<BAckgroundcolChg/>
     //<MyComponent/>
+
+    //Redux Toolkit
+    // <Provider store={store}>
+    //   {/* <ReduxScreen /> */}
+    //   <RNStackNavigation/>
+    // </Provider>
+
+    //redux persist
     <Provider store={store}>
-      {/* <ReduxScreen /> */}
-      <RNStackNavigation/>
+        <PersistGate persistor={persistor}>
+          <SafeAreaView>
+            <RNStackNavigation/>
+          </SafeAreaView>       
+        </PersistGate>
     </Provider>
   );
 };
