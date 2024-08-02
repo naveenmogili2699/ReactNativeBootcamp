@@ -64,17 +64,17 @@ import Rdx from './src/Redux/MyComponent';
 import BAckgroundcolChg from './src/Screens/Tasks/BAckgroundcolChg';
 import MyComponent from './src/Redux/MyComponent';
 import ReduxScreen from './src/Screens/ReduxScreen';
-import {store} from './src/Redux/ReduxToolKit/store';
+// import {store} from './src/Redux/ReduxToolKit/store';
 import {Provider} from 'react-redux';
 import RNBottomNavigation from './src/Navigations/RNBottom/RNBottomNavigation';
 import Basics1 from './src/Components/CoreComponents/Basics1';
 import { PersistGate } from 'redux-persist/integration/react';
 import { persistStore } from 'redux-persist';
-import { mystore } from './src/Redux/ReduxPersist/mystore';
+import PersistScreen from './src/Screens/PersistScreen';
+import { persistor, store } from './src/Redux/ReduxPersist/persistStore';
 
 
 const App = () => {
-  const persistor = persistStore(mystore)
   return (
     //   <SafeAreaView>
     //     <ScrollView>
@@ -159,12 +159,13 @@ const App = () => {
 
     //redux persist
     <Provider store={store}>
-        <PersistGate persistor={persistor}>
+    <PersistGate loading={null} persistor={persistor}>
           <SafeAreaView>
-            <RNStackNavigation/>
+            {/* <RNStackNavigation/> */}
+            <PersistScreen/>
           </SafeAreaView>       
         </PersistGate>
-    </Provider>
+    </Provider> 
   );
 };
 
