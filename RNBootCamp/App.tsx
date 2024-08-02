@@ -69,9 +69,8 @@ import {Provider} from 'react-redux';
 import RNBottomNavigation from './src/Navigations/RNBottom/RNBottomNavigation';
 import Basics1 from './src/Components/CoreComponents/Basics1';
 import { PersistGate } from 'redux-persist/integration/react';
-import { persistStore } from 'redux-persist';
+import { mystore, persistor } from './src/Redux/ReduxPersist/mystore';
 import PersistScreen from './src/Screens/PersistScreen';
-import { persistor, store } from './src/Redux/ReduxPersist/persistStore';
 
 
 const App = () => {
@@ -158,8 +157,8 @@ const App = () => {
     // </Provider>
 
     //redux persist
-    <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
+    <Provider store={mystore}>
+        <PersistGate persistor={persistor}>
           <SafeAreaView>
             {/* <RNStackNavigation/> */}
             <PersistScreen/>
