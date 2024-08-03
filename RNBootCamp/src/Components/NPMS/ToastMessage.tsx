@@ -19,7 +19,7 @@ const ToastMessage = () => {
     <View>
       <Text>Toast Messages</Text>
       <Image 
-      source={require("../Images/one.jpg")}
+      source={require("../../Images/one.jpg")}
       style={{height:500, width:'90%',alignSelf:'center', borderColor:'green', borderWidth:1,borderRadius:12}}
       />
       <Toast />

@@ -1,12 +1,8 @@
 import { Alert, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import RNStackNavigation from '../Navigations/RNStack/RNStackNavigation'
 import HomeScreen from '../Screens/HomeScreen'
 import { createNativeStackNavigator, } from '@react-navigation/native-stack';
-import { NavigationContainer } from '@react-navigation/native';
-import VectorImage from 'react-native-vector-image';
 
 const navcont = createNativeStackNavigator();
 const LoginPage = () => {
@@ -75,8 +71,8 @@ const LoginPage = () => {
             ) :
             (
                 <View>
-                        <navcont.Screen name='Home' component={HomeScreen} />
-                        {/* <HomeScreen/> */}
+                        
+                        
                         <TouchableOpacity style={styles.logout} onPress={() => removeCreds()}>
                         <Text style={styles.btntxt}>Logout</Text>
                     </TouchableOpacity>
