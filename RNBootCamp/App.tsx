@@ -62,94 +62,19 @@ import BottomSheets from './src/Components/NPMS2/BottomSheets';
 import GoogleMaps from './src/Components/NPMS2/GoogleMaps';
 import Rdx from './src/Redux/MyComponent';
 import BAckgroundcolChg from './src/Screens/Tasks/BAckgroundcolChg';
-import MyComponent from './src/Redux/MyComponent';
 import ReduxScreen from './src/Screens/ReduxScreen';
-// import {store} from './src/Redux/ReduxToolKit/store';
+import {store} from './src/Redux/ReduxToolKit/store';
 import {Provider} from 'react-redux';
 import RNBottomNavigation from './src/Navigations/RNBottom/RNBottomNavigation';
 import Basics1 from './src/Components/CoreComponents/Basics1';
 import { PersistGate } from 'redux-persist/integration/react';
 import { persistStore } from 'redux-persist';
 import PersistScreen from './src/Screens/PersistScreen';
-import { persistor, store } from './src/Redux/ReduxPersist/persistStore';
+// import { persistor, store } from './src/Redux/ReduxPersist/persistStore';
 
 
 const App = () => {
   return (
-    //   <SafeAreaView>
-    //     <ScrollView>
-    
-    //       <ProgramsList />
-    //       <MapMethod />
-    //       <AlertsPractice />
-    //       <ModelPractice />
-    //       <StatusBarPractice />
-    //       <ActivityIndicatorPractice /> */}
-    //       {/* <UseEffectPractice />
-    //       <UseReducerPractice/>
-    //       <UseReducerPractice2 /> */}
-    //       {/* <UseRefPractice /> */}
-    //       {/* <PickerPractice /> */}
-    //       {/* <UseRefPractice /> */}
-    //       {/* <UseRefwithTimer /> */}
-    //       {/* <StopWatch/> */}
-    //       {/* <First/> */}
-    //       {/* <Task2/>
-    //       <Task3/> */}
-    //       {/* <First2/> */}
-    //       {/* <Task3/> */}
-    //        {/* <BackGroundImages/> */}
-    //       {/* <Text>Hello World</Text>
-    //       <View ><Text>Hello 123</Text></View> */}
-    //       {/* <ImageonImage/> */}
-    //       {/* <UseMemo/> */}
-    //       {/* <UseCallBack/> */}
-    //       {/* <UseCallBack2></UseCallBack2> */}
-    //       {/* <TextinputsinFlatList/> */}
-    //     </ScrollView>
-    //  </SafeAreaView>
-    //<LoginPage/>
-
-    //<RNStackNavigation />
-    // <RNBottomNavigation />
-    // <RNDrawerNavigation />
-    // <RNTopMenuNavigation />
-
-    // <LoginNavigations />
-
-    // <VectorIcons/>
-
-    // <Dropdownpicker/>
-
-    // <Imagepicker/>
-
-    // <RNModel/>
-
-    // <RadioButtonGroup/>
-    // <CheckBoxes/>
-    // <RNCalendars/>
-    // <Toggleswitch/>
-    // <SliderBar/>
-    // <IntroSlider/>
-    // <ToastMessage/>
-    // <CustomeToast/>
-    //<FormikandYup/>
-    //<NPMsTask1/>
-    //<DatePickerPrac/>
-    //<RNSharing/>
-    //<Shareing/>
-    //<Screenshot/>
-    //<Sht/>
-    //<AwakeLib/>
-
-    //<Popupmenu/>
-    //<LoAni/>
-    //<RNProgress/>
-    //<BottomSheets/>
-    //<GoogleMaps/>
-    //<Rdx/>
-    //<BAckgroundcolChg/>
-    //<MyComponent/>
 
     //Redux Toolkit
     // <Provider store={store}>
@@ -159,12 +84,10 @@ const App = () => {
 
     //redux persist
     <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
-          <SafeAreaView>
-            {/* <RNStackNavigation/> */}
-            <PersistScreen/>
-          </SafeAreaView>       
-        </PersistGate>
+    {/* <PersistGate loading={null} persistor={persistor}> */}
+            <RNStackNavigation/>
+            {/* <PersistScreen/> */}      
+        {/* </PersistGate> */}
     </Provider> 
   );
 };

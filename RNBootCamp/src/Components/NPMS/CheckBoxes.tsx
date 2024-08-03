@@ -9,7 +9,7 @@ const CheckBoxes = () => {
     <View style={styles.container}>
       <View style={styles.container}>
         <Text> value: {isChecked?"Checked":"Not Checked"} </Text>
-        <CheckBox value={isChecked} onValueChange={(val) => setIsChecked(val)} {isChecked?'red':'blue'} />
+        {/* <CheckBox value={isChecked} onValueChange={(val) => setIsChecked(val)} {isChecked?'red':'blue'} /> */}
         <Button
           onPress={() => setIsChecked(!isChecked)}
           title="toggle the value above"
