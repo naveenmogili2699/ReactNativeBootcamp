@@ -25,16 +25,16 @@ import UseRefPractice from '../../Hooks/UseRefPractice';
 import PickerPractice from '../../Components/CoreComponents/PickerPractice';
 import UseRefwithTimer from '../../Components/CoreComponents/UseRefwithTimer';
 import StopWatch from '../../Hooks/StopWatch';
-import First from '../../Screens/Tasks/First';
-import Task2 from '../../Screens/Tasks/Task2';
-import Task3 from '../../Screens/Tasks/Task3';
-import First2 from '../../Screens/Tasks/First2';
-import BackGroundImages from '../../Screens/Tasks/BackGroundImages';
-import ImageonImage from '../../Screens/Tasks/ImageonImage';
+import First from '../../Components/Tasks/First';
+import Task2 from '../../Components/Tasks/Task2';
+import Task3 from '../../Components/Tasks/Task3';
+import First2 from '../../Components/Tasks/First2';
+import BackGroundImages from '../../Components/Tasks/BackGroundImages';
+import ImageonImage from '../../Components/Tasks/ImageonImage';
 import UseMemo from '../../Hooks/UseMemo';
 import UseCallBack from '../../Hooks/UseCallBack';
 import UseCallBack2 from '../../Hooks/UseCallBack2';
-import TextinputsinFlatList from '../../Screens/Tasks/TextinputsinFlatList';
+import TextinputsinFlatList from '../../Components/Tasks/TextinputsinFlatList';
 import LoginPage from '../../Components/CoreComponents/LoginPage';
 import VectorIcons from '../../Components/NPMS/VectorIcons';
 import Dropdownpicker from '../../Components/NPMS/Dropdownpicker';
@@ -49,7 +49,7 @@ import IntroSlider from '../../Components/NPMS/IntroSlider';
 import ToastMessage from '../../Components/NPMS/ToastMessage';
 import CustomeToast from '../../Components/NPMS/CustomeToast';
 import FormikandYup from '../../Components/NPMS/FormikandYup';
-import NPMsTask1 from '../../Screens/Tasks/NPMsTask1';
+import NPMsTask1 from '../../Components/Tasks/NPMsTask1';
 import DatePickerPrac from '../../Components/NPMS/DatePickerPrac';
 import RNSharing from '../../Components/NPMS2/RNSharing';
 import Shareing from '../../Components/NPMS2/Shareing';
@@ -60,8 +60,13 @@ import Popupmenu from '../../Components/NPMS2/Popupmenu';
 import LoAni from '../../Components/NPMS2/LoAni';
 import RNProgress from '../../Components/NPMS2/RNProgress';
 import GoogleMaps from '../../Components/NPMS2/GoogleMaps';
-import BAckgroundcolChg from '../../Screens/Tasks/BAckgroundcolChg';
-import PersistScreen from '../../Screens/PersistScreen';
+import BAckgroundcolChg from '../../Components/Tasks/BAckgroundcolChg';
+import PersistScreen from '../../Components/NPMS/PersistScreen';
+import Login from '../../Screens/LoginFunctionality/Login';
+import Contacts from '../../Screens/LoginFunctionality/Contacts';
+import RNFirebase from '../../Screens/RNFirebase';
+import RNAPI from '../../Screens/RNAPI';
+import RNComponents from '../../Screens/RNComponents';
 
 const Stack = createNativeStackNavigator();
 const RNStackNavigation = () => {
@@ -71,6 +76,9 @@ const RNStackNavigation = () => {
         <Stack.Screen name='Home' component={HomeScreen} />
         <Stack.Screen name='About' component={AboutScreen} />
         <Stack.Screen name='Details' component={DetailsPage} />
+        <Stack.Screen name='RNFirebase' component={RNFirebase} />
+        <Stack.Screen name='RNAPI' component={RNAPI} />
+        <Stack.Screen name='RNComponents' component={RNComponents} />
 
         
         <Stack.Screen name='Basics1' component={Basics1} />
@@ -126,6 +134,8 @@ const RNStackNavigation = () => {
         <Stack.Screen name='PersistScreen' component={PersistScreen} />
         <Stack.Screen name='Async' component={AsyncStorageScreen} />
         <Stack.Screen name='Intro' component={Intro} />
+        <Stack.Screen name='Login' component={Login} />
+        <Stack.Screen name='Contacts' component={Contacts} />
       </Stack.Navigator>
     </NavigationContainer>
   )
