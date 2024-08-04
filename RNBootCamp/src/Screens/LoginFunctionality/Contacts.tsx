@@ -1,13 +1,14 @@
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import {useNavigation} from '@react-navigation/native';
+const Contacts = () => {
 
-const Contacts = ({navigation}) => {
     const [userArray, setUserArray]=useState([])
-
+    const navigation = useNavigation();
     const deleteCreds = () => {
         AsyncStorage.removeItem("USERNAME")
-        navigation.navigate('Login')
+        navigation.navigate('Home')
     }
 
     const getcreds = async() => {

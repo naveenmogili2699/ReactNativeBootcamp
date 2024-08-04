@@ -4,9 +4,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Login from './Login';
+import {useNavigation} from '@react-navigation/native';
 
-const Intro = ({navigation}) => {
-
+const Intro = ({}) => {
+    const navigation = useNavigation();
     useEffect(() => {
         setTimeout(() => {
             isLoggedin()

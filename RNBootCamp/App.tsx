@@ -16,16 +16,16 @@ import UseReducerPractice2 from './src/Hooks/UseReducerPractice2';
 import PickerPractice from './src/CoreComponents/PickerPractice';
 import UseRefwithTimer from './src/CoreComponents/UseRefwithTimer';
 import StopWatch from './src/Hooks/StopWatch';
-import First from './src/Screens/Tasks/First';
-import Task2 from './src/Screens/Tasks/Task2';
-import Task3 from './src/Screens/Tasks/Task3';
-import First2 from './src/Screens/Tasks/First2';
-import BackGroundImages from './src/Screens/Tasks/BackGroundImages';
-import ImageonImage from './src/Screens/Tasks/ImageonImage';
+import First from './src/Components/Tasks/First';
+import Task2 from './src/Components/Tasks/Task2';
+import Task3 from './src/Components/Tasks/Task3';
+import First2 from './src/Components/Tasks/First2';
+import BackGroundImages from './src/Components/Tasks/BackGroundImages';
+import ImageonImage from './src/Components/Tasks/ImageonImage';
 import UseMemo from './src/Hooks/UseMemo';
 import UseCallBack from './src/Hooks/UseCallBack';
 import UseCallBack2 from './src/Hooks/UseCallBack2';
-import TextinputsinFlatList from './src/Screens/Tasks/TextinputsinFlatList';
+import TextinputsinFlatList from './src/Components/Tasks/TextinputsinFlatList';
 import RNStackNavigation from './src/Navigations/RNStack/RNStackNavigation';
 import LoginPage from './src/CoreComponents/LoginPage';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -45,7 +45,7 @@ import IntroSlider from './src/Components/NPMS/IntroSlider';
 import ToastMessage from './src/Components/NPMS/ToastMessage';
 import CustomeToast from './src/Components/NPMS/CustomeToast';
 import FormikandYup from './src/Components/NPMS/FormikandYup';
-import NPMsTask1 from './src/Screens/Tasks/NPMsTask1';
+import NPMsTask1 from './src/Components/Tasks/NPMsTask1';
 import DatePickerPrac from './src/Components/NPMS/DatePickerPrac';
 import Shareing from './src/Components/NPMS2/Shareing';
 import Screenshot from './src/Components/NPMS2/Screenshot';
@@ -61,15 +61,15 @@ import RNProgress from './src/Components/NPMS2/RNProgress';
 import BottomSheets from './src/Components/NPMS2/BottomSheets';
 import GoogleMaps from './src/Components/NPMS2/GoogleMaps';
 import Rdx from './src/Redux/MyComponent';
-import BAckgroundcolChg from './src/Screens/Tasks/BAckgroundcolChg';
-import ReduxScreen from './src/Screens/ReduxScreen';
+import BAckgroundcolChg from './src/Components/Tasks/BAckgroundcolChg';
+import ReduxScreen from './src/Components/NPMS/ReduxScreen';
 import {store} from './src/Redux/ReduxToolKit/store';
 import {Provider} from 'react-redux';
 import RNBottomNavigation from './src/Navigations/RNBottom/RNBottomNavigation';
 import Basics1 from './src/Components/CoreComponents/Basics1';
 import { PersistGate } from 'redux-persist/integration/react';
 import { persistStore } from 'redux-persist';
-import PersistScreen from './src/Screens/PersistScreen';
+import PersistScreen from './src/Components/NPMS/PersistScreen';
 // import { persistor, store } from './src/Redux/ReduxPersist/persistStore';
 
 
@@ -85,7 +85,8 @@ const App = () => {
     //redux persist
     <Provider store={store}>
     {/* <PersistGate loading={null} persistor={persistor}> */}
-            <RNStackNavigation/>
+            <RNBottomNavigation/>
+            {/* <RNStackNavigation/> */}
             {/* <PersistScreen/> */}      
         {/* </PersistGate> */}
     </Provider> 

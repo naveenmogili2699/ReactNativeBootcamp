@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement, multiply, selectCount,itemRed, selectItem} from '../Redux/ReduxToolKit/counterSlice';
-import {deposit, totalBlc} from '../Redux/ReduxToolKit/balanceSlice';
+import { increment, decrement, multiply, selectCount,itemRed, selectItem} from '../../Redux/ReduxToolKit/counterSlice';
+import {deposit, totalBlc} from '../../Redux/ReduxToolKit/balanceSlice';
 import { View, Text, Button } from 'react-native';
 
 
@@ -12,6 +12,7 @@ const ReduxScreen = () => {
   const blc = useSelector(totalBlc)
 
   return (
+    
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Redux Example</Text>
       <Text>Count: {count}</Text>
